@@ -9,7 +9,7 @@ namespace PokeballReview.Models
     public class Categories
     {
         [Key]
-        int CategoryID { get; set; }
+        public int CategoryID { get; set; }
         public string CategoryName { get; set; }
 
         ICollection<Reviews> Reviews { get; set; }

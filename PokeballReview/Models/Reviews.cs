@@ -10,7 +10,6 @@ namespace PokeballReview.Models
     public class Reviews
     {
         [Key]
-
         public int ReviewID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
