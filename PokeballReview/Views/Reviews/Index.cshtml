@@ -4,54 +4,38 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1 id="indexHeader">REVIEWS HERE</h1>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p class="btn-lg creatBtn">
+    @Html.ActionLink("Create New", "Create", null, new {style = "color:white"})
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Etc)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.CategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Content)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Etc)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
-        </td>
-    </tr>
-}
+  <div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-sm-6 card pokeStyle">
+            <h2>
+                @Html.DisplayFor(modelItem => item.Title)              
+            </h2>
+            <h4>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </h4>
+            <h4>
+                @Html.DisplayFor(modelItem => item.Content)
+            </h4>
+            <h4>
+                @Html.DisplayFor(modelItem => item.PublishDate)
+            </h4>
+            <h6>
+                @Html.DisplayFor(modelItem => item.Etc)
+            </h6>
+            <p id="line">
+                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID, style = "color:white"}) |
+                @Html.ActionLink("Details", "Details", new { id = item.ReviewID, style = "color:white" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID, style = "color:white"})
+            </p>
+        </div>
+    }
 
-</table>
+</div>
+

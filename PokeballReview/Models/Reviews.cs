@@ -13,6 +13,7 @@ namespace PokeballReview.Models
         public int ReviewID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
         public DateTime PublishDate { get; set; }
         public string Etc { get; set; }
 

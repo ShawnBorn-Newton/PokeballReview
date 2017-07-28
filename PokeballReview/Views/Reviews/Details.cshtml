@@ -4,55 +4,64 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h1 id="indexHeader">Details</h1>
 
-<div>
-    <h4>Reviews</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.CategoryName)
-        </dd>
+<h3 id="indexHeader">Reviews</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4 col-sm-6">
+        <div class="card deetsStyle">
+            <h3 class="underline">
+                @Html.DisplayNameFor(model => model.Category.CategoryName)
+            </h3>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+            <h4>
+                @Html.DisplayFor(model => model.Category.CategoryName)
+            </h4>
+        </div>
+        <div class="card deetsStyle">
+            <h3 class="underline">
+                @Html.DisplayNameFor(model => model.Title)
+            </h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+            <h4>
+                @Html.DisplayFor(model => model.Title)
+            </h4>
+        </div>
+        <div class="card deetsStyle">
+            <h3 class="underline">
+                @Html.DisplayNameFor(model => model.Content)
+            </h3>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
+            <h4>
+                @Html.DisplayFor(model => model.Content)
+            </h4>
+        </div>
+        <div class="card deetsStyle">
+            <h3 class="underline">
+                @Html.DisplayNameFor(model => model.PublishDate)
+            </h3>
 
-        <dd>
-            @Html.DisplayFor(model => model.Content)
-        </dd>
+            <h4>
+                @Html.DisplayFor(model => model.PublishDate)
+            </h4>
+        </div>
+        <div class="card deetsStyle">
+            <h3 class="underline">
+                @Html.DisplayNameFor(model => model.Etc)
+            </h3>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishDate)
-        </dt>
+            <h4>
+                @Html.DisplayFor(model => model.Etc)
+            </h4>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.PublishDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Etc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Etc)
-        </dd>
-
-    </dl>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+<p class="btn-lg creatBtn">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID })
+</p>
+<p class="btn-lg creatBtn">
     @Html.ActionLink("Back to List", "Index")
 </p>

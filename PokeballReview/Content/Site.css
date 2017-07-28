@@ -41,7 +41,29 @@ textarea {
 .thumbnail{
     height:250px;
     width:350px;
+    margin:2px;
 }
 .shiftRight{
     margin-left:50px;
+}
+/*REVIEWINDEX*/
+#indexHeader{
+    color:white;
+}
+.creatBtn{
+    width:130px;  
+}
+#line{
+    border-top:2px solid white;
+    color:white;
+}
+/*REVIEWSDETAIL*/
+.deetsStyle{
+    color:white;
+    background-color:black;
+    padding:5px;
+    opacity:.80;
+}
+.underline{
+    border-bottom:2px solid white;
 }
