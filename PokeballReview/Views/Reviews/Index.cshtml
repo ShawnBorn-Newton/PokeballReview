@@ -5,10 +5,58 @@
 }
 
 <h1 id="indexHeader">REVIEWS HERE</h1>
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+    </ol>
 
-<p class="btn-lg creatBtn">
-    @Html.ActionLink("Create New", "Create", null, new {style = "color:white"})
-</p>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item slides active">
+            <div class="slide-1"></div>
+            <div class="hero">
+                <hgroup>
+                    <h1>Evolution Stones</h1>
+                    <h3>Did you get a dud?</h3>
+                </hgroup>
+                <p class="btn btn-hero btn-lg">
+                    @Html.ActionLink("Create New", "Create", null, new { style = "color:white" })
+                </p>
+            </div>
+        </div>
+        <div class="item slides">
+            <div class="slide-2"></div>
+            <div class="hero">
+                <hgroup>
+                    <h1>Pokenavs & Pokedexes</h1>
+                    <h3>See the best and worst in Trainer tools!</h3>
+                </hgroup>
+                <p class="btn btn-hero btn-lg">
+                    @Html.ActionLink("Create New", "Create", null, new { style = "color:white" })
+                </p>
+            </div>
+        </div>
+        <div class="item slides">
+            <div class="slide-3"></div>
+            <div class="hero">
+                <hgroup>
+                    <h1>Technical Machines</h1>
+                    <h3>See the moves you need!</h3>
+                </hgroup>
+                <p class="btn btn-hero btn-lg">
+                    @Html.ActionLink("Create New", "Create", null, new { style = "color:white" })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
   <div class="row">
     @foreach (var item in Model)
